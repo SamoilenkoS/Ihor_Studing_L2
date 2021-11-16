@@ -36,11 +36,6 @@ namespace Ihor_Studing_L2
 
         static void Main()
         {
-            string a = "Hello";
-            string b = "World";
-            Task2(ref a, ref b);
-
-            Console.WriteLine(a + " " + b);
         }
     }
 }
