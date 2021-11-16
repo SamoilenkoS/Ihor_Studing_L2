@@ -43,6 +43,23 @@ namespace Ihor_Studing_L2
         static void Main()
         {// >, <, ==, >=, <=, !=
             //a > 0 ? 10 : -10;//(condition)? ifTrue : ifFalse ;
+            int choise = Convert.ToInt32(Console.ReadLine());
+            switch (choise)
+            {
+                case 1:
+                    Console.WriteLine("Task 1");
+                    break;
+                case 2:
+                    Console.WriteLine("Task 2");
+                    break;
+                case 3:
+                    Console.WriteLine("Task 3");
+                    break;
+                default:
+                    Console.WriteLine("No task");
+                    break;
+            }
+
             double a = Convert.ToDouble(Console.ReadLine());
             double b = Convert.ToDouble(Console.ReadLine());
             double c = Convert.ToDouble(Console.ReadLine());
