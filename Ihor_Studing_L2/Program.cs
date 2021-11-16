@@ -23,7 +23,13 @@ namespace Ihor_Studing_L2
 
         static double Task4(double a, double b, double c) // Not equal to 0
         {
-            return (c - b) / a;
+            double result = 0;
+            if(a != 0)
+            {
+                result = (c - b) / a;
+            }
+
+            return result;
         }
 
         static (double, double) Task5(double x1, double y1, double x2, double y2)
@@ -35,7 +41,31 @@ namespace Ihor_Studing_L2
         }
 
         static void Main()
-        {
+        {// >, <, ==, >=, <=, !=
+            //a > 0 ? 10 : -10;//(condition)? ifTrue : ifFalse ;
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            double c = Convert.ToDouble(Console.ReadLine());
+            if(a != 0)
+            {
+                double d = b * b - 4 * a * c;
+                if (d > 0)
+                {
+                    double x1 = (-b + Math.Sqrt(d)) / (2 * a);
+                    double x2 = (-b - Math.Sqrt(d)) / (2 * a);
+
+                    Console.WriteLine($"{x1}{Environment.NewLine}{x2}");
+                }
+                else if (d == 0)
+                {
+                    double x1 = -b / (2 * a);
+                    Console.WriteLine($"{x1}");
+                }
+                else
+                {
+                    Console.WriteLine("No roots");
+                }
+            }
         }
     }
 }
